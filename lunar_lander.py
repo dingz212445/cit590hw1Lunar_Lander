@@ -25,16 +25,17 @@ def lunar_lander():
         print("landed.\n")
 
 def play_again():
-    again = int(input("Want to try again?(1-yes,0-no)\n"))
-    while again != 1 and again != 0:
-        again = int(input("Want to try again?(1-yes,0-no)\n"))
+    again = input("Want to try again?(y/Y-yes,n/N-no)\n")
+    while again != "Y" and again != "y" and again != "N" and again != "n":
+        again = input("Want to try again?(y/Y-yes,n/N-no)\n")
     return again
 
 def main():
     lunar_lander()
-    while play_again() == 1:
+    again = play_again()
+    while again == "Y" or again == "y":
         lunar_lander()
-        
+        again = play_again()
 
 if __name__ == "__main__":
     main()
