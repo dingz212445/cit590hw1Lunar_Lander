@@ -26,9 +26,9 @@ def lunar_lander():
 
 def play_again():
     again = input("Want to try again?(y/Y-yes,n/N-no)\n")
-    while again != "Y" and again != "y" and again != "N" and again != "n":
+    while again[0] != "Y" and again[0] != "y" and again[0] != "N" and again[0] != "n":
         again = input("Want to try again?(y/Y-yes,n/N-no)\n")
-    return again
+    return again[0]
 
 def main():
     lunar_lander()
